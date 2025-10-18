@@ -1,0 +1,80 @@
+import React, { useState } from 'react';
+
+const Experience: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(0);
+
+  const experiences = [
+    {
+      company: 'Upstatement',
+      position: 'Engineer',
+      period: 'May 2018 - Present',
+      description: [
+        'Write modern, performant, maintainable code for a diverse array of client and internal projects',
+        'Work with a variety of different languages, platforms, frameworks, and content management systems such as JavaScript, TypeScript, React, Vue, Node.js, WordPress, and Netlify',
+        'Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis',
+      ],
+    },
+    {
+      company: 'Apple',
+      position: 'Software Engineer',
+      period: 'Jan 2017 - Apr 2018',
+      description: [
+        'Developed and maintained code for in-house and client websites primarily using HTML, CSS, Sass, JavaScript, and jQuery',
+        'Interfaced with clients on a weekly basis, providing technological expertise',
+      ],
+    },
+  ];
+
+  return (
+    <section id="experience" className="py-16 lg:py-20 w-full">
+      <div className="w-full">
+        <div className="flex items-center mb-8 lg:mb-12">
+          <h2 className="text-xl lg:text-2xl font-bold text-white font-mono whitespace-nowrap">
+            <span className="text-primary">02.</span> Where I've Worked
+          </h2>
+          <div className="ml-4 h-px bg-slate flex-grow max-w-xs"></div>
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          <div className="flex lg:flex-col overflow-x-auto pb-2 lg:pb-0">
+            {experiences.map((exp, index) => (
+              <button
+                key={index}
+                onClick={() => setActiveTab(index)}
+                className={`px-4 py-3 font-mono text-sm whitespace-nowrap border-l-2 lg:border-l-0 lg:border-b-2 transition-colors flex-shrink-0 ${
+                  activeTab === index
+                    ? 'text-primary border-primary bg-primary/10'
+                    : 'text-slate border-dark-light hover:bg-dark-light'
+                }`}
+              >
+                {exp.company}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex-1">
+            <div className="mb-4">
+              <h3 className="text-lg lg:text-xl font-semibold text-white">
+                {experiences[activeTab].position}{' '}
+                <span className="text-primary">@ {experiences[activeTab].company}</span>
+              </h3>
+              <p className="text-slate font-mono text-xs lg:text-sm mb-4 lg:mb-6">
+                {experiences[activeTab].period}
+              </p>
+            </div>
+            <ul className="space-y-3">
+              {experiences[activeTab].description.map((item, index) => (
+                <li key={index} className="flex items-start">
+                  <span className="text-primary mr-3 mt-1 flex-shrink-0">▹</span>
+                  <span className="text-slate text-sm lg:text-base">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Experience;

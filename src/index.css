@@ -1,0 +1,105 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a192f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #495670;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #64ffda;
+}
+Hide default cursor
+* {
+  cursor: none !important;
+}
+
+/* Ensure interactive elements work well with custom cursor */
+a, button, .interactive, .magnetic {
+  position: relative;
+}
+
+/* Ensure the right side is scrollable */
+.ml-1\/2 {
+  margin-left: 50%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Hide scrollbar for cleaner look */
+.ml-1\/2::-webkit-scrollbar {
+  display: none;
+}
+
+.ml-1\/2 {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Ensure fixed left side doesn't scroll */
+.fixed {
+  position: fixed;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+/* Responsive layout */
+@media (max-width: 1023px) {
+  .lg\:ml-1\/2 {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Ensure smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom cursor for desktop only */
+@media (max-width: 768px) {
+  .cursor-none {
+    cursor: auto;
+  }
+  
+  .custom-cursor {
+    display: none;
+  }
+}
+
+/* Improve mobile touch targets */
+@media (max-width: 768px) {
+  a, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}

@@ -1,0 +1,63 @@
+import React from 'react';
+
+const About: React.FC = () => {
+  const skills = [
+    'JavaScript (ES6+)',
+    'TypeScript',
+    'React',
+    'Vue.js',
+    'Node.js',
+    'Python',
+    'Java',
+  ];
+
+  return (
+    <section id="about" className="py-16 lg:py-20 w-full">
+      <div className="w-full">
+        <div className="flex items-center mb-8 lg:mb-12">
+          <h2 className="text-xl lg:text-2xl font-bold text-white font-mono whitespace-nowrap">
+            <span className="text-primary">01.</span> About Me
+          </h2>
+          <div className="ml-4 h-px bg-slate flex-grow max-w-xs"></div>
+        </div>
+
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-8 lg:gap-12">
+          <div className="lg:col-span-2">
+            <p className="text-slate mb-4 text-sm lg:text-base">
+              Hello! I'm Musila, a software engineer based in Nairobi, Kenya. 
+              I enjoy creating things that live on the internet, whether that 
+              be websites, applications, or anything in between.
+            </p>
+            <p className="text-slate mb-4 text-sm lg:text-base">
+              I have a passion for building scalable, maintainable software 
+              and love working with modern technologies.
+            </p>
+            <p className="text-slate mb-6 lg:mb-8 text-sm lg:text-base">
+              Here are a few technologies I've been working with recently:
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-w-md">
+              {skills.map((skill, index) => (
+                <div key={index} className="flex items-center">
+                  <span className="text-primary mr-2">▹</span>
+                  <span className="text-slate font-mono text-xs lg:text-sm">{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+          
+          <div className="relative group order-first lg:order-last">
+            <div className="w-full h-64 lg:h-80 bg-primary/20 rounded-lg overflow-hidden mx-auto max-w-sm">
+              <div className="w-full h-full bg-gray-400 flex items-center justify-center">
+                <span className="text-slate">Your Photo</span>
+              </div>
+            </div>
+            <div className="absolute inset-0 border-2 border-primary rounded-lg translate-x-4 translate-y-4 -z-10 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform hidden lg:block"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
