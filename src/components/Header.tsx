@@ -148,10 +148,10 @@ const Header: React.FC = () => {
               ✕
             </button>
             <iframe
-              src="/resume.pdf#toolbar=0&navpanes=0&scrollbar=0"
+              src={`${window.location.origin}/resume.pdf#toolbar=0&navpanes=0&scrollbar=0`}
               className="w-full h-full"
               title="Resume PDF"
-            ></iframe>
+            />
           </div>
         </div>
       )}
