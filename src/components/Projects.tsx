@@ -6,8 +6,8 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'MindFul Gen',
-      description: 'A full-stack mental health platform built with Next.js and Firebase, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Firebase Auth for secure user sessions, and Firestore for real-time data sync across devices. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
-      tech: ['Next.js', 'TailwindCSS', 'Firebase Auth', 'Firestore', 'Vercel'],
+      description: 'A full-stack mental health platform built with Next.js and a FastAPI (Python) backend, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Google OAuth for secure authentication, and Supabase for real-time data sync and PostgreSQL-backed persistence. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
+      tech: ['Next.js', 'TailwindCSS', 'Supabase', 'Google OAuth', 'FastAPI', 'Vercel'],
       github: 'https://github.com/peter-kiilu',
       live: 'https://mindful-gen.vercel.app/',
       image: '/MindfulPic.png', 
