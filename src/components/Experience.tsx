@@ -9,7 +9,7 @@ const Experience: React.FC = () => {
       position: 'ICT Support Officer',
       period: 'May 2025 - August 2025',
       description: [
-        'Maintained and monitored ICT infrastructure serving 10,000+ students and staff, achieving 99.9% system uptime through proactive maintenance and rapid troubleshooting',
+        'Maintained and monitored ICT infrastructure serving 10,000+ students and staff, achieving 90.9% system uptime through proactive maintenance and rapid troubleshooting',
         'Automated software deployment and hardware configuration workflows, reducing setup time by 40% across 200+ campus workstations',
         'Resolved 50+ high-priority support tickets weekly with an average turnaround of under 2 hours, earning recognition from the IT department head',
       ],
@@ -31,7 +31,7 @@ const Experience: React.FC = () => {
       description: [
         'Architected and launched a React/FastAPI platform for 3 SME clients that automated invoice processing, reducing manual data entry by 60%',
         'Designed a normalized PostgreSQL schema handling 100K+ records with optimized queries, cutting average response times from 1.2s to 180ms',
-        'Built 15+ RESTful API endpoints with JWT authentication and role-based access control, serving 2,000+ active users with 99.5% uptime',
+        'Built 15+ RESTful API endpoints with JWT authentication and role-based access control, serving 2,000+ active users with 95.5% uptime',
       ],
     },
   ];
