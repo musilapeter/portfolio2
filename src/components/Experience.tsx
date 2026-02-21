@@ -25,9 +25,9 @@ const Experience: React.FC = () => {
       ],
     },
     {
-      company: 'Remote',
+      company: 'Remote Work',
       position: 'Software Engineer',
-      period: 'Jan 2017 - Apr 2018',
+      period: 'Jan 2023 - Apr 2025',
       description: [
         'Built a full-stack web application using React for the frontend and FastAPI (Python) for the backend, delivering a responsive and high-performance user experience',
         'Designed and optimized PostgreSQL database schemas, queries, and migrations to support scalable data management',
