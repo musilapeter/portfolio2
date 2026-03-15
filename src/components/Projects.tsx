@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'MindFul Gen',
-      description: 'A mental health platform built with Next.js and a FastAPI (Python) backend, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Google OAuth for secure authentication, and Supabase for real-time data sync and PostgreSQL-backed persistence. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
+      description: 'Built for a client a mental health platform built with Next.js and a FastAPI (Python) backend, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Google OAuth for secure authentication, and Supabase for real-time data sync and PostgreSQL-backed persistence. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
       tech: ['Next.js', 'TailwindCSS', 'Supabase', 'Google OAuth', 'FastAPI', 'Vercel'],
       github: 'https://github.com/peter-kiilu',
       live: 'https://mindful-gen.vercel.app/',
@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
     {
       id: 2,
       title: 'CoolHarlems Inventory System',
-      description: 'A full-stack Inventory Management System featuring POS integration and offline-first PWA capabilities. Built with FastAPI, React, and PostgreSQL, it enables real-time stock tracking, sales analytics, and automated inventory reconciliation across any device. Challenges: Orchestrating complex data synchronization between IndexedDB and a central REST API. Ensuring transaction integrity during offline-to-online transitions was critical for maintaining accurate stock levels in low-connectivity retail environments. Metrics: Delivered 100% offline uptime for critical sales tasks and achieved sub-500ms response times for local operations, significantly boosting retail checkout efficiency and reducing server load.',
+      description: 'Build for a medium sized business a full-stack Inventory Management System featuring POS integration and offline-first PWA capabilities. Built with FastAPI, React, and PostgreSQL, it enables real-time stock tracking, sales analytics, and automated inventory reconciliation across any device. Challenges: Orchestrating complex data synchronization between IndexedDB and a central REST API. Ensuring transaction integrity during offline-to-online transitions was critical for maintaining accurate stock levels in low-connectivity retail environments. Metrics: Delivered 100% offline uptime for critical sales tasks and achieved sub-500ms response times for local operations, significantly boosting retail checkout efficiency and reducing server load.',
       tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS', 'Supabase', 'PWA', 'IndexedDB', 'Vercel'],
       github: 'https://github.com/peter-kiilu',
       live: 'https://me-inventory.vercel.app/',
