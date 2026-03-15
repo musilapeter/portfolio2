@@ -6,7 +6,7 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'MindFul Gen',
-      description: 'A full-stack mental health platform built with Next.js and a FastAPI (Python) backend, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Google OAuth for secure authentication, and Supabase for real-time data sync and PostgreSQL-backed persistence. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
+      description: 'A mental health platform built with Next.js and a FastAPI (Python) backend, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Google OAuth for secure authentication, and Supabase for real-time data sync and PostgreSQL-backed persistence. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
       tech: ['Next.js', 'TailwindCSS', 'Supabase', 'Google OAuth', 'FastAPI', 'Vercel'],
       github: 'https://github.com/peter-kiilu',
       live: 'https://mindful-gen.vercel.app/',
@@ -14,12 +14,12 @@ const Projects: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Oracle Fortune — AI Prediction Engine',
-      description: 'A cyberpunk-themed prediction platform that integrates OpenAI\'s GPT API with real-time market data to generate AI-driven forecasts on crypto, stocks, and global events. Built with React and Supabase for real-time state management and PostgreSQL-backed persistence. Features include a virtual currency betting system, streamed AI responses for low-latency UX, and row-level security via Supabase policies for multi-user isolation.',
-      tech: ['React', 'TailwindCSS', 'Supabase', 'OpenAI API', 'Vercel'],
+      title: 'CoolHarlems Inventory System',
+      description: 'A full-stack Inventory Management System featuring POS integration and offline-first PWA capabilities. Built with FastAPI, React, and PostgreSQL, it enables real-time stock tracking, sales analytics, and automated inventory reconciliation across any device. Challenges: Orchestrating complex data synchronization between IndexedDB and a central REST API. Ensuring transaction integrity during offline-to-online transitions was critical for maintaining accurate stock levels in low-connectivity retail environments. Metrics: Delivered 100% offline uptime for critical sales tasks and achieved sub-500ms response times for local operations, significantly boosting retail checkout efficiency and reducing server load.',
+      tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS', 'Supabase', 'PWA', 'IndexedDB', 'Vercel'],
       github: 'https://github.com/peter-kiilu',
-      live: 'https://oracle-fortune.vercel.app/',
-      image: '/orac.png',
+      live: 'https://me-inventory.vercel.app/',
+      image: 'cool.png',
     },
   ];
 
@@ -51,6 +51,9 @@ const Projects: React.FC = () => {
                     alt={project.title}
                     className="w-full h-48 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/1e293b/4f46e5?text=Project+Preview';
+                    }}
                   />
                 </div>
               </div>
