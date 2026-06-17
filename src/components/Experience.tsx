@@ -5,33 +5,52 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
+      company: 'FDE – Client Deployments',
+      position: 'Forward Deployed Engineer',
+      period: '2024 – Present',
+      description: [
+        'Embedded Deployment: Integrated an AI-powered document parsing engine into a financial client\'s existing workflow, reducing manual data entry time by 70% and processing 10,000+ documents daily with 98% accuracy.',
+        'Technical Strategy: Architected and deployed a real-time dashboard using WebSockets and React, enabling a logistics company to visualize fleet efficiency, resulting in a 15% reduction in fuel costs.',
+        'Legacy Modernization: Led the migration of a monolithic e-commerce backend to a microservices architecture using Docker and Node.js, achieving zero downtime during a Black Friday sales event.',
+      ],
+    },
+    {
+      company: 'Previous Role',
+      position: 'Software Engineer (MERN/AI Focus)',
+      period: '2022 – 2024',
+      description: [
+        'Data Pipeline Construction: Built a high-throughput data pipeline using Python and MongoDB that aggregated user behavior from 5+ sources, feeding a recommendation engine that increased user retention by 22%.',
+        'AI Feature Development: Designed and shipped a chatbot using React Native and Python LLMs that handled 40% of all customer support queries autonomously.',
+      ],
+    },
+    {
       company: 'University of Embu',
       position: 'ICT Support Officer',
-      period: 'May 2025 - August 2025',
+      period: 'May 2025 – August 2025',
       description: [
-        'Maintained and monitored ICT infrastructure serving 10,000+ students and staff, achieving 90.9% system uptime through proactive maintenance and rapid troubleshooting',
-        'Automated software deployment and hardware configuration workflows, reducing setup time by 60% across 10+ campus workstations',
-        'Resolved 50+ high-priority support tickets weekly with an average turnaround of under 2 hours, earning recognition from the IT department head',
+        'Maintained and monitored ICT infrastructure serving 10,000+ students and staff, achieving 90.9% system uptime through proactive maintenance and rapid troubleshooting.',
+        'Automated software deployment and hardware configuration workflows, reducing setup time by 60% across 10+ campus workstations.',
+        'Resolved 50+ high-priority support tickets weekly with an average turnaround of under 2 hours, earning recognition from the IT department head.',
       ],
     },
     {
       company: 'MarketForce',
       position: 'Interim Engineer',
-      period: 'May 2024 - Sept 2024',
+      period: 'May 2024 – Sept 2024',
       description: [
-        'Shipped 5+ client-facing features in React and TypeScript, improving user engagement metrics by 25% across MarketForce\'s B2B distribution platform',
-        'Spearheaded migration of legacy jQuery components to React.js, reducing page load times by 35% and cutting frontend bug reports in half',
-        'Collaborated daily with a cross-functional team of 8 engineers, 2 designers, and product managers to deliver sprint goals consistently ahead of schedule',
+        'Shipped 5+ client-facing features in React and TypeScript, improving user engagement metrics by 25% across MarketForce\'s B2B distribution platform.',
+        'Spearheaded migration of legacy jQuery components to React.js, reducing page load times by 35% and cutting frontend bug reports in half.',
+        'Collaborated daily with a cross-functional team of 8 engineers, 2 designers, and product managers to deliver sprint goals consistently ahead of schedule.',
       ],
     },
     {
       company: 'Remote Work',
       position: 'Software Engineer',
-      period: 'Jan 2023 - Apr 2025',
+      period: 'Jan 2023 – Apr 2025',
       description: [
-        'Architected and launched a React/FastAPI platform for 3 SME clients that automated invoice processing, reducing manual data entry by 60%',
-        'Designed a normalized PostgreSQL schema handling 100K+ records with optimized queries, cutting average response times from 1.2s to 180ms',
-        'Built 15+ RESTful API endpoints with JWT authentication and role-based access control, serving 2,000+ active users with 95.5% uptime',
+        'Architected and launched a React/FastAPI platform for 3 SME clients that automated invoice processing, reducing manual data entry by 60%.',
+        'Designed a normalized PostgreSQL schema handling 100K+ records with optimized queries, cutting average response times from 1.2s to 180ms.',
+        'Built 15+ RESTful API endpoints with JWT authentication and role-based access control, serving 2,000+ active users with 95.5% uptime.',
       ],
     },
   ];
@@ -41,7 +60,7 @@ const Experience: React.FC = () => {
       <div className="w-full">
         <div className="flex items-center mb-8 lg:mb-12">
           <h2 className="text-xl lg:text-2xl font-bold text-white font-mono whitespace-nowrap">
-            <span className="text-primary">02.</span> Where I've Worked
+            <span className="text-primary">02.</span> Impact & Experience
           </h2>
           <div className="ml-4 h-px bg-slate flex-grow max-w-xs"></div>
         </div>
@@ -52,7 +71,7 @@ const Experience: React.FC = () => {
               <button
                 key={index}
                 onClick={() => setActiveTab(index)}
-                className={`px-4 py-3 font-mono text-sm whitespace-nowrap border-l-2 lg:border-l-0 lg:border-b-2 transition-colors flex-shrink-0 ${
+                className={`px-4 py-3 font-mono text-sm whitespace-nowrap border-l-2 lg:border-l-0 lg:border-b-2 transition-colors flex-shrink-0 text-left ${
                   activeTab === index
                     ? 'text-primary border-primary bg-primary/10'
                     : 'text-slate border-dark-light hover:bg-dark-light'

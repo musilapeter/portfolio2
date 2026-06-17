@@ -5,21 +5,21 @@ const Projects: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'MindFul Gen',
-      description: 'Built for a client a mental health platform built with Next.js and a FastAPI (Python) backend, featuring real-time mood tracking, guided meditation sessions, and personalized wellness insights. Implements server-side rendering for SEO optimization, Google OAuth for secure authentication, and Supabase for real-time data sync and PostgreSQL-backed persistence. Designed with an accessible, calming UI using TailwindCSS with custom theme tokens.',
-      tech: ['Next.js', 'TailwindCSS', 'Supabase', 'Google OAuth', 'FastAPI', 'Vercel'],
+      title: 'SaneGenius',
+      description: 'A premium, free, open-source developer education platform designed to take learners from their first line of HTML to architecting intelligent AI agents. Built around a unique concept—The Eras of Technology—SaneGenius guides learners through the physical and logical evolution of software engineering across 6 progressive learning paths (120+ lessons, 36 projects), covering Foundations, Python/Django, JavaScript/React, Backend Systems, AI/ML, and Agentic AI. Engineered with Next.js 16 (App Router), TypeScript, and Tailwind CSS v4 for instant page loads, glassmorphism aesthetics, and premium UX. Backed by Supabase for auth and real-time data sync.',
+      tech: ['Next.js 16', 'TypeScript', 'Tailwind CSS v4', 'Supabase', 'Lucide React'],
       github: 'https://github.com/peter-kiilu',
-      live: 'https://mindful-gen.vercel.app/',
-      image: '/MindfulPic.png', 
+      live: 'https://sanegenius.com',
+      image: '/sanegenius.png',
     },
     {
       id: 2,
-      title: 'CoolHarlems Inventory System',
-      description: 'Build for a medium sized business a full-stack Inventory Management System featuring POS integration and offline-first PWA capabilities. Built with FastAPI, React, and PostgreSQL, it enables real-time stock tracking, sales analytics, and automated inventory reconciliation across any device. Challenges: Orchestrating complex data synchronization between IndexedDB and a central REST API. Ensuring transaction integrity during offline-to-online transitions was critical for maintaining accurate stock levels in low-connectivity retail environments. Metrics: Delivered 100% offline uptime for critical sales tasks and achieved sub-500ms response times for local operations, significantly boosting retail checkout efficiency and reducing server load.',
-      tech: ['React', 'FastAPI', 'PostgreSQL', 'TailwindCSS', 'Supabase', 'PWA', 'IndexedDB', 'Vercel'],
+      title: 'ODPC Kenya Shield Bot',
+      description: 'An intelligent AI chatbot for the Office of the Data Protection Commissioner (ODPC) Kenya, powered by Retrieval-Augmented Generation (RAG). The system automatically crawls the official ODPC website, indexes content into a ChromaDB vector database, and provides accurate, source-backed answers to queries about Kenyan data protection laws. Features automated knowledge base construction, semantic search, PostgreSQL-backed conversational memory, and source attribution with direct links. Built on FastAPI for high-performance async handling, with Llama 3.1 via Groq API as the LLM backbone.',
+      tech: ['FastAPI', 'Llama 3.1 (Groq)', 'ChromaDB', 'PostgreSQL', 'Docker', 'HuggingFace Embeddings'],
       github: 'https://github.com/peter-kiilu',
-      live: 'https://me-inventory.vercel.app/',
-      image: '/cool.png',
+      live: 'https://www.odpc.go.ke/',
+      image: '/odpc-shieldbot.png',
     },
   ];
 
@@ -43,19 +43,21 @@ const Projects: React.FC = () => {
                 index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
               } gap-6 lg:gap-8 items-center`}
             >
-              {/* ✅ Project Image */}
+              {/* Project Image */}
               <div className="flex-1 group relative w-full">
-                <div className="bg-primary/20 rounded-lg overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-48 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                    loading="lazy"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/1e293b/4f46e5?text=Project+Preview';
-                    }}
-                  />
-                </div>
+                <a href={project.live} target="_blank" rel="noopener noreferrer">
+                  <div className="bg-primary/20 rounded-lg overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 lg:h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                      onError={(e) => {
+                        (e.target as HTMLImageElement).src = 'https://placehold.co/600x400/1e293b/4f46e5?text=Project+Preview';
+                      }}
+                    />
+                  </div>
+                </a>
               </div>
 
               {/* Project Info */}
