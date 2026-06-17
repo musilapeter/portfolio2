@@ -7,7 +7,7 @@ const Experience: React.FC = () => {
     {
       company: 'FDE – Client Deployments',
       position: 'Forward Deployed Engineer',
-      period: '2024 – Present',
+      period: '2025 – Present',
       description: [
         'Embedded Deployment: Integrated an AI-powered document parsing engine into a financial client\'s existing workflow, reducing manual data entry time by 70% and processing 10,000+ documents daily with 98% accuracy.',
         'Technical Strategy: Architected and deployed a real-time dashboard using WebSockets and React, enabling a logistics company to visualize fleet efficiency, resulting in a 15% reduction in fuel costs.',
@@ -17,7 +17,7 @@ const Experience: React.FC = () => {
     {
       company: 'Previous Role',
       position: 'Software Engineer (MERN/AI Focus)',
-      period: '2022 – 2024',
+      period: '2022 – 2025',
       description: [
         'Data Pipeline Construction: Built a high-throughput data pipeline using Python and MongoDB that aggregated user behavior from 5+ sources, feeding a recommendation engine that increased user retention by 22%.',
         'AI Feature Development: Designed and shipped a chatbot using React Native and Python LLMs that handled 40% of all customer support queries autonomously.',
@@ -46,7 +46,7 @@ const Experience: React.FC = () => {
     {
       company: 'Remote Work',
       position: 'Software Engineer',
-      period: 'Jan 2023 – Apr 2025',
+      period: 'Jan 2022 – Apr 2025',
       description: [
         'Architected and launched a React/FastAPI platform for 3 SME clients that automated invoice processing, reducing manual data entry by 60%.',
         'Designed a normalized PostgreSQL schema handling 100K+ records with optimized queries, cutting average response times from 1.2s to 180ms.',
