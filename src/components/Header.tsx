@@ -5,7 +5,7 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
-  const resumeFileName = 'PETER MUSILA  - CV.pdf';
+  const resumeFileName = 'PETER MUSILA -CV.pdf';
   const resumePath = `/${encodeURI(resumeFileName)}`;
   const resumeViewerUrl = `${window.location.origin}${resumePath}#toolbar=0&navpanes=0&scrollbar=0`;
 
